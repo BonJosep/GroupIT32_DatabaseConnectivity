@@ -1,6 +1,10 @@
 # Number Sprint
 
-**Group number and members:** Group 01 – _(add full names here)_
+**Group number and members:** Group IT32 – 
+Mangaron, Von Joseph L.
+Mendoza, Karl Louie
+Realon, Jaspher
+Uy, Joshua Isaac
 
 ## Description
 A browser math game. The player enters a name, picks a level, and answers as many sums as possible in 30 seconds. The score is saved to a database and the top 10 saved scores are displayed in the app.
