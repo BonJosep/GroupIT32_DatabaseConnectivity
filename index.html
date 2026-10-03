@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Number Sprint</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Number Sprint</h1>
+    <p>Solve as many sums as you can in 30 seconds. Your score is saved to the database.</p>
+  </header>
+
+  <section id="start" class="panel">
+    <label for="name">Player name</label>
+    <input id="name" maxlength="20" placeholder="Enter your name" autocomplete="off">
+    <label for="level">Level</label>
+    <select id="level">
+      <option value="1">Level 1: add up to 10</option>
+      <option value="2">Level 2: add and subtract up to 20</option>
+      <option value="3">Level 3: multiply up to 10</option>
+    </select>
+    <button id="startBtn">Start game</button>
+    <p id="startMsg" class="msg"></p>
+  </section>
+
+  <section id="play" class="panel" hidden>
+    <div class="bar"><span>Time: <b id="time">30</b>s</span><span>Score: <b id="score">0</b></span></div>
+    <div id="question" class="question">1 + 1</div>
+    <input id="answer" type="number" inputmode="numeric" placeholder="Your answer" autocomplete="off">
+    <button id="submitBtn">Submit answer</button>
+  </section>
+
+  <section id="result" class="panel" hidden>
+    <h2 id="resultTitle"></h2>
+    <p id="resultText"></p>
+    <button id="saveBtn">Save score</button>
+    <button id="againBtn" class="secondary">Play again</button>
+    <p id="saveMsg" class="msg"></p>
+  </section>
+
+  <section class="panel">
+    <div class="bar"><h2>Saved scores</h2><button id="clearBtn" class="secondary small">Clear all</button></div>
+    <table>
+      <thead><tr><th>Player</th><th>Score</th><th>Level</th><th>Remarks</th><th>Saved</th></tr></thead>
+      <tbody id="rows"><tr><td colspan="5">Loading…</td></tr></tbody>
+    </table>
+  </section>
+</main>
+<script src="db.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
